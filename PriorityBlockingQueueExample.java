@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 class PriorityBlockingQueueExample {
 
-  private final PriorityQueue<BasicDiscoPeer> evictionQueue = new PriorityQueue<BasicDiscoPeer>(16, Comparator.comparingInt(BasicDiscoPeer::getLastContacted));
+  private final PriorityBlockingQueue<BasicDiscoPeer> evictionQueue = new PriorityBlockingQueue<BasicDiscoPeer>(16, Comparator.comparingInt(BasicDiscoPeer::getLastContacted));
 
   public static void main(String[] args) {
     new PriorityBlockingQueueExample().go();
